@@ -25,13 +25,14 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /* 第２回追加コード */
+    padding: 0px 20px;
 }
 
 .kv_content {
     max-width: 1250px;
     margin: 0 auto;
     padding-top:60px;
-    /* 難易度高いポイント */
     height: calc(100% - 60px - 80px);
     position: relative;
 }
@@ -85,4 +86,135 @@ a {
     font-size: 24px;
     letter-spacing: 7.2px;
     line-height: 40px;
+}
+
+/* 第２回追加コード */
+
+.about {
+    padding: 270px 20px 300px;
+}
+
+.about_content {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 auto;
+}
+
+.about p {
+    color: #383838;
+    font-family: 'Noto Serif JP',serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 6.6px;
+}
+
+.about_text {
+    width: 350px;
+}
+
+.about_logo {
+    max-width: 260px;
+    margin-bottom: 80px;
+}
+
+.about_images {
+    position: relative;
+    width: calc(100% - 350px);
+    max-width: 735px;
+    padding-top: 50%;
+}
+
+
+.about_images img:first-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 610px;
+    width: 83%;
+}
+
+.about_images img:last-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 250px;
+    width: 34%;
+}
+
+.br_sp {
+    display: none;
+}
+
+@media screen and (max-width: 844px) {
+    .kv {
+        height: 380px;
+    }
+    .kv_content {
+        padding-top: 16px;
+        height: 355px;
+    }
+    .kv_text {
+        width: 100%;
+    }
+    .header_logo {
+        width: 102px;
+    }
+    .nav {
+        display: none;
+    }
+
+    .br_sp {
+        display: block;
+    }
+
+    .kv_text p:first-child {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 7.2px;
+    }
+
+    .kv_text p:last-child {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 5.4px;
+    }
+
+    .about {
+        padding: 52px 20px;
+    }
+
+    .about_content {
+        flex-flow: column;
+    }
+    .about_text {
+        width: 100%;
+        text-align: center;
+    }
+    .about_logo {
+        max-width: 180px;
+        margin-bottom: 40px;
+    }
+    .about p {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 5.4px;
+        margin-bottom: 52px;
+    }
+    .about_images {
+        width: 100%;
+        height: auto;
+        /* テクニックポイント（パディングハック） */
+        padding-top: 75%;
+    }
+    .about_images img:first-child {
+        width: 90%;
+    }
+    .about_images img:last-child {
+        width: 40%;
+    }
 }
