@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 .flex_center {
     display: flex;
     justify-content: space-between;
@@ -23,9 +27,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* 第２回追加コード */
     padding: 0px 20px;
-    /*  */
 }
 
 .kv_content {
@@ -55,7 +57,6 @@ a {
     position: relative;
 }
 
-/* 第２回追加コード */
 .nav .flex_center a::after {
     position: absolute;
     left: 0;
@@ -83,12 +84,10 @@ a {
     margin-left: 20px;
 }
 
-/* 第２回追加コード */
 .reservation_link:hover {
     opacity: 0.8;
     transition: 0.3s;
 }
-/*  */
 
 .kv_text {
     position: absolute;
@@ -112,8 +111,6 @@ a {
     letter-spacing: 7.2px;
     line-height: 40px;
 }
-
-/* 第２回追加コード */
 
 .about {
     padding: 270px 20px 300px;
@@ -232,6 +229,7 @@ a {
 
 .room_select_list {
     gap: 30px;
+    margin-bottom: 32px;
 }
 
 .room_select_list p{
@@ -261,6 +259,47 @@ a {
     top: 100px;
     right: 90px;
     animation: anim_room_cloud ease-in-out infinite alternate 3.0s;
+}
+
+.rooms {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.room_view {
+    display: none;
+}
+
+.room_view.active {
+    display: block;
+}
+
+.room_view img {
+    vertical-align: top;
+}
+
+.room_textarea {
+    padding: 40px;
+    background-color: white;
+}
+
+.room_view .title {
+    color: #383838;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 6.9px;
+    margin-bottom: 28px;
+}
+
+.room_view .text {
+    color: #383838;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 4.8px;
 }
 
 @keyframes anim_room_cloud {
@@ -371,6 +410,19 @@ a {
     }
     .line {
         height: 30px;
+    }
+
+    .room_textarea {
+        padding: 20px;
+    }
+
+    .room_view .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .room_view .text {
+        font-size: 14px;
     }
 }
 
