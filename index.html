@@ -103,6 +103,96 @@
         </div>
     </div>
 
+    <div class="reservation">
+        <div class="content_title flex_center">
+            <p class="ja_title">ご予約</p>
+            <div class="line"></div>
+            <p class="en_title">reservation</p>
+        </div>
+        <p class="reservation_text">「楽園雅苑 - 桜庭温泉の隠れ家 -」へのご予約、心よりお待ちしております。お手数をおかけいたしますが、以下のフォームに必要事項をご記入の上、ご送信ください。</p>
+        <form action="./thanks.html">
+            <div class="flex_center form_content">
+                <p>お名前<span>＊</span></p>
+                <input type="text" name="name" required>
+            </div>
+            <div class="flex_center form_content">
+                <p>メールアドレス<span>＊</span></p>
+                <input type="email" name="email required">
+            </div>
+            <div class="flex_center form_content">
+                <p>電話番号<span>＊</span></p>
+                <input type="tel" name="tel" required>
+            </div>
+            <div class="flex_center align-top form_content">
+                <p class="top_text">ご住所<span>＊</span></p>
+                <div class="address_content">
+                    <div class="flex_center short_input">
+                        <p>郵便番号</p>
+                        <input type="text" name="address">
+                    </div>
+                    <div class="flex_center short_input">
+                        <p>都道府県</p>
+                        <input type="text" name="prefecture">
+                    </div>
+                    <div class="flex_center short_input">
+                        <p>市区町村</p>
+                        <input type="text" name="city">
+                    </div>
+                    <div class="flex_center short_input">
+                        <p>町域・番地
+                        建物名</p>
+                        <input type="text" name="house_number">
+                    </div>
+                </div>
+            </div>
+            <div class="flex_center form_content form_select">
+                <p>ご希望の宿泊プラン<span>＊</span></p>
+                <select name="plan" id="">
+                    <option value="placeholder" hidden>選択してください</option>
+                    <option value="standard">スタンダードルーム</option>
+                    <option value="deluxe">デラックスルーム</option>
+                    <option value="premier">プレミアスィート</option>
+                </select>
+            </div>
+            <div class="flex_center form_content form_select">
+                <p>大人の人数<span>＊</span></p>
+                <select name="adult" id="">
+                    <option value="placeholder" hidden>選択してください</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div class="flex_center form_content form_select">
+                <p>お子様の人数<span>＊</span></p>
+                <select name="kids" id="">
+                    <option value="placeholder" hidden>選択してください</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="flex_center form_content align-top">
+                <p class="top_text">特別リクエスト</p>
+                <textarea name="request" rows="10" cols=""></textarea>
+            </div>
+            <p class="form_text">予約を確認するため、お客様の連絡先情報をご提供いただきます。ご予約に関する詳細情報や特別なリクエストがございましたら、お知らせください。心よりお待ちしております。</p>
+            <div class="submit_content">
+                <input type="submit" value="送信する">
+            </div>
+        </form>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./js/index.js"></script>
 </body>

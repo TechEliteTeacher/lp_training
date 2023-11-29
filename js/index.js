@@ -6,4 +6,8 @@ $(function(){
         $(".room_view").removeClass("active");
         $("#"+id+"_content").addClass("active");
     });
-})
+
+    $('#date').datepicker({
+        minDate: new Date()
+    });
+});
