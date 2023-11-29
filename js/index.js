@@ -1,6 +1,6 @@
 $(function(){
     $('.room_select_list p').click(function(){
-        let id = $(this).attr('id');
+        var id = $(this).attr('id');
         $(".room_select_list p").removeClass("active");
         $(this).addClass("active");
         $(".room_view").removeClass("active");
@@ -11,14 +11,14 @@ $(function(){
         $(".validation").empty();
         var validation_flg = false;
         // 名前
-        let name = $('input[name="name"]').val();
+        var name = $('input[name="name"]').val();
         if(!name) {
             $('input[name="name"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // メールアドレス
-        let email = $('input[name="email"]').val();
+        var email = $('input[name="email"]').val();
         if(!email) {
             $('input[name="email"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
@@ -28,7 +28,7 @@ $(function(){
         }
 
         // 電話番号
-        let tel = $('input[name="tel"]').val();
+        var tel = $('input[name="tel"]').val();
         if(!tel) {
             $('input[name="tel"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
@@ -41,49 +41,49 @@ $(function(){
         }
 
         // 郵便番号
-        let address = $('input[name="address"]').val();
+        var address = $('input[name="address"]').val();
         if(!address) {
             $('input[name="address"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 都道府県
-        let prefecture = $('input[name="prefecture"]').val();
+        var prefecture = $('input[name="prefecture"]').val();
         if(!prefecture) {
             $('input[name="prefecture"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 市区町村
-        let city = $('input[name="city"]').val();
+        var city = $('input[name="city"]').val();
         if(!city) {
             $('input[name="city"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 町域・番地 建物名
-        let house_number = $('input[name="house_number"]').val();
+        var house_number = $('input[name="house_number"]').val();
         if(!house_number) {
             $('input[name="house_number"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // ご希望の宿泊プラン
-        let plan = $('select[name="plan"]').val();
+        var plan = $('select[name="plan"]').val();
         if(plan == "placeholder") {
             $('select[name="plan"]').parent().next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 大人の人数
-        let adult = $('select[name="adult"]').val();
+        var adult = $('select[name="adult"]').val();
         if(adult == "placeholder") {
             $('select[name="adult"]').parent().next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 子供の人数
-        let kids = $('select[name="kids"]').val();
+        var kids = $('select[name="kids"]').val();
         if(kids == "placeholder") {
             $('select[name="kids"]').parent().next('.validation').text("＊入力必須です");
             validation_flg = true;
