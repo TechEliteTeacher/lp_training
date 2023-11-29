@@ -374,6 +374,11 @@ select {
     appearance: none;
 }
 
+.input_content {
+    max-width: 570px;
+    width: 100%;
+}
+
 input,textarea {
     max-width: 530px;
     width: 100%;
@@ -388,8 +393,13 @@ input,textarea {
     margin-bottom: 20px;
 }
 
+.short_input_content {
+    max-width: 410px;
+    width: 100%;
+}
+
 .short_input input {
-    max-width: 390px;
+    max-width: 370px;
     width: 100%;
 }
 
@@ -477,6 +487,10 @@ input[type="submit"] {
     line-height: 34px;
     letter-spacing: 5.4px;
     margin-bottom: 80px;
+}
+
+.validation {
+    color: #C00;
 }
 
 @keyframes anim_room_cloud {
