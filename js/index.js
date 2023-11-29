@@ -8,7 +8,7 @@ $(function(){
     });
 
     $("form").submit(function(){
-        $(".validation").empty();;
+        $(".validation").empty();
         var validation_flg = false;
         // 名前
         let name = $('input[name="name"]').val();
