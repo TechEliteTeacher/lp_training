@@ -532,7 +532,7 @@ input[type="submit"] {
     }
 
     .form_select::after {
-        top: 67%;
+        top: 50%;
     }
 
     .form_text {
@@ -541,6 +541,10 @@ input[type="submit"] {
 
     .under_page_hader .header {
         padding: 16px 20px;
+    }
+
+    .short_input_content {
+        max-width: 100%;
     }
 }
 
