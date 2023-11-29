@@ -12,14 +12,14 @@ $(function(){
         var validation_flg = false;
         // 名前
         var name = $('input[name="name"]').val();
-        if(!name) {
+        if(name == "") {
             $('input[name="name"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // メールアドレス
         var email = $('input[name="email"]').val();
-        if(!email) {
+        if(email == "") {
             $('input[name="email"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         } else if(email.match(/.+@.+\..+/)==null) {
@@ -29,7 +29,7 @@ $(function(){
 
         // 電話番号
         var tel = $('input[name="tel"]').val();
-        if(!tel) {
+        if(tel == "") {
             $('input[name="tel"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         } else if(tel) {
@@ -42,28 +42,28 @@ $(function(){
 
         // 郵便番号
         var address = $('input[name="address"]').val();
-        if(!address) {
+        if(address == "") {
             $('input[name="address"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 都道府県
         var prefecture = $('input[name="prefecture"]').val();
-        if(!prefecture) {
+        if(prefecture == "") {
             $('input[name="prefecture"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 市区町村
         var city = $('input[name="city"]').val();
-        if(!city) {
+        if(city == "") {
             $('input[name="city"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
 
         // 町域・番地 建物名
         var house_number = $('input[name="house_number"]').val();
-        if(!house_number) {
+        if(house_number == "") {
             $('input[name="house_number"]').next('.validation').text("＊入力必須です");
             validation_flg = true;
         }
