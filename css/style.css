@@ -758,6 +758,10 @@ input[type="submit"] {
     .back_submit {
         margin-top: 20px !important;
     }
+
+    .confirm_text {
+        padding-top: 52px;
+    }
 }
 
 /*  */
