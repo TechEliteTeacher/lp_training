@@ -556,6 +556,10 @@ input[type="submit"] {
     background-color: rgb(179, 178, 178);
     color: white;
 }
+
+select {
+    background-color: white;
+}
 @keyframes anim_room_cloud {
     0% {
         transform: translate(0, 0px);

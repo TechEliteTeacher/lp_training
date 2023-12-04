@@ -169,7 +169,7 @@
                     <select name="adult">
                         <option value="placeholder" hidden>選択してください</option>
                         <?php
-                        $seats = array(0, 1, 2, 3, 4, 5, 6, 7, 8);
+                        $seats = array("0", "1", "2", "3", "4", "5", "6", "7", 8);
                         foreach ($seats as $key => $value) {
                         ?>
                             <option <?php echo $_POST["adult"] === $value ? "selected" : "" ?> value="<?php echo $value ?>"><?php echo $value ?></option>
@@ -188,7 +188,7 @@
                     <select name="kids" id="">
                         <option value="placeholder" hidden>選択してください</option>
                         <?php
-                        $seats = array(0, 1, 2, 3, 4, 5);
+                        $seats = array("0", "1", "2", "3", "4", "5");
                         foreach ($seats as $key => $value) {
                         ?>
                             <option <?php echo $_POST["kids"] === $value ? "selected" : "" ?> value="<?php echo $value ?>"><?php echo $value ?></option>
