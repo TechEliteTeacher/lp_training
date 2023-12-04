@@ -302,6 +302,197 @@ img {
     letter-spacing: 4.8px;
 }
 
+.reservation {
+    padding: 211px 120px 200px;
+    margin: 0 auto;
+    background-color: #F9F4E2;
+}
+
+.reservation .content_title {
+    max-width: 300px;
+}
+
+.reservation_text {
+    margin-top: 80px;
+    color: #383838;
+    font-family: 'Noto Serif JP',serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 5.4px;
+    margin-bottom: 160px;
+}
+
+form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+form p {
+    color: #383838;
+    font-family: 'Noto Serif JP',serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 5.4px;
+}
+
+form span {
+    color: #C00;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.form_content {
+        margin-bottom: 20px;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],select,textarea {
+    color: #383838;
+    font-family:'Noto Serif JP', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 4.8px;
+    padding: 13px 20px;
+}
+
+.top_text {
+        margin-top: 17px;
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    max-width:570px;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.input_content {
+    max-width: 570px;
+    width: 100%;
+}
+
+input,textarea {
+    max-width: 530px;
+    width: 100%;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.short_input {
+    width: 570px;
+    margin-bottom: 20px;
+}
+
+.short_input_content {
+    max-width: 410px;
+    width: 100%;
+}
+
+.short_input input {
+    max-width: 370px;
+    width: 100%;
+}
+
+.form_select {
+    position:relative
+}
+
+.form_select::after {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid black;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.form_text {
+    color:#383838;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 4.8px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+input[type="submit"] {
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background:  #B8A973;
+    color: #FFF;
+    font-family:'Noto Serif JP',serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 5.4px;
+    padding: 12px 0;
+}
+
+.submit_content {
+    text-align: center;
+}
+
+.under_page_hader {
+    background:#383838;
+}
+
+.under_page_hader .header {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+
+.thanks_text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px;
+    text-align: center;
+}
+
+.thanks_text p:first-child {
+    color:#383838;
+    font-family: 'Noto Serif JP',serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 8.4px;
+    margin-bottom: 80px;
+}
+
+.thanks_text p {
+    color: #383838;
+    text-align: center;
+    font-family: 'Noto Serif JP',serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 5.4px;
+    margin-bottom: 80px;
+}
+
+.validation {
+    color: #C00;
+}
+
 @keyframes anim_room_cloud {
     0% {
         transform: translate(0, 0px);
@@ -309,6 +500,51 @@ img {
 
     100% {
         transform: translate(0px, 20px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .form_content,.short_input {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+
+    input,textarea,.short_input {
+        max-width: 100%;
+        width: calc(100% - 40px);
+    }
+
+    .short_input input,select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form p {
+        width: 100%;
+    }
+
+    .reservation {
+        padding: 52px 20px;
+    }
+
+    .address_content {
+        width: 100%;
+    }
+
+    .form_select::after {
+        top: 50%;
+    }
+
+    .form_text {
+        margin-top: 60px;
+    }
+
+    .under_page_hader .header {
+        padding: 16px 20px;
+    }
+
+    .short_input_content {
+        max-width: 100%;
     }
 }
 
@@ -423,6 +659,20 @@ img {
 
     .room_view .text {
         font-size: 14px;
+    }
+
+    .thanks_text {
+        padding: 0px 20px;
+        padding-top: 52px;
+        text-align: left;
+    }
+
+    .thanks_text p {
+        text-align: left;
+    }
+
+    .thanks_text p:first-child {
+        text-align: center;
     }
 }
 
