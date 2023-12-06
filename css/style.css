@@ -451,11 +451,11 @@ input[type="submit"] {
     text-align: center;
 }
 
-.under_page_hader {
+.under_page_header {
     background:#383838;
 }
 
-.under_page_hader .header {
+.under_page_header .header {
     max-width: 1240px;
     margin: 0 auto;
     padding: 60px 0px;
@@ -493,6 +493,73 @@ input[type="submit"] {
     color: #C00;
 }
 
+.confirm_table {
+    padding: 0px 20px;
+    text-align: left;
+}
+
+.confirm_text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px;
+    text-align: center;
+}
+
+.confirm_text p {
+    color: #383838;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 8.4px;
+    margin-bottom: 80px;
+}
+
+.confirm_border {
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    padding: 56px 0px;
+    margin-bottom: 80px;
+}
+
+.confirm_text table {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.confirm_text table td {
+    color:#383838;
+    font-family: 'Noto Serif JP',serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 5.4px;
+    vertical-align: baseline;
+}
+
+.confirm_text .send_text {
+    color: #383838;
+    text-align: center;
+    font-family:'Noto Serif JP',serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 4.8px;
+}
+.confirm_form {
+    margin-bottom: 100px;
+}
+
+.confirm_form .back_submit {
+    background-color: rgb(179, 178, 178);
+    color: white;
+}
+
+select {
+    background-color: white;
+}
 @keyframes anim_room_cloud {
     0% {
         transform: translate(0, 0px);
@@ -539,7 +606,7 @@ input[type="submit"] {
         margin-top: 60px;
     }
 
-    .under_page_hader .header {
+    .under_page_header .header {
         padding: 16px 20px;
     }
 
@@ -673,6 +740,31 @@ input[type="submit"] {
 
     .thanks_text p:first-child {
         text-align: center;
+    }
+
+    .confirm_text table td {
+        width: 100%;
+        display: block;
+    }
+
+    .confirm_text table td:last-child{
+        border-bottom: 1px solid #E4E4E4;
+    }
+
+    .confirm_text table td.no_underline {
+        border-bottom: 0px solid #E4E4E4;
+    }
+
+    .confirm_form {
+        flex-direction: column-reverse;
+    }
+
+    .back_submit {
+        margin-top: 20px !important;
+    }
+
+    .confirm_text {
+        padding-top: 52px;
     }
 }
 
