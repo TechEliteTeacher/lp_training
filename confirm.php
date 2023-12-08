@@ -85,6 +85,30 @@
                 </tr>
                 <tr>
                     <td>
+                        チェックイン日
+                    </td>
+                    <td>
+                        <?php
+                        if (isset($_POST["checkin"])) {
+                            echo $_POST["checkin"];
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        チェックアウト日
+                    </td>
+                    <td>
+                        <?php
+                        if (isset($_POST["checkout"])) {
+                            echo $_POST["checkout"];
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         ご希望の宿泊プラン
                     </td>
                     <td>
@@ -142,12 +166,14 @@
             <input type="hidden" name="prefecture" value=<?php echo $_POST["prefecture"] ? $_POST["prefecture"] : ""; ?>>
             <input type="hidden" name="city" value=<?php echo $_POST["city"] ? $_POST["city"] : ""; ?>>
             <input type="hidden" name="house_number" value=<?php echo $_POST["house_number"] ? $_POST["house_number"] : ""; ?>>
+            <input type="hidden" name="checkin" value=<?php echo $_POST["checkin"] ? $_POST["checkin"] : ""; ?>>
+            <input type="hidden" name="checkout" value=<?php echo $_POST["checkout"] ? $_POST["checkout"] : ""; ?>>
             <input type="hidden" name="plan" value=<?php echo $_POST["plan"] ? $_POST["plan"] : ""; ?>>
             <input type="hidden" name="adult" value=<?php echo $_POST["adult"] ? $_POST["adult"] : ""; ?>>
             <input type="hidden" name="kids" value=<?php echo $_POST["kids"] ? $_POST["kids"] : ""; ?>>
             <input type="hidden" name="request" value=<?php echo $_POST["request"] ? $_POST["request"] : ""; ?>>
             <input formaction="./#form" class="back_submit" type="submit" value="戻る">
-            <input formaction="./thanks.php" type="submit" value="送信">
+            <input formaction="./send.php" type="submit" value="送信">
         </form>
     </div>
 </div>
