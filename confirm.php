@@ -171,7 +171,7 @@
             <input type="hidden" name="plan" value=<?php echo $_POST["plan"] ? $_POST["plan"] : ""; ?>>
             <input type="hidden" name="adult" value=<?php echo $_POST["adult"] ? $_POST["adult"] : ""; ?>>
             <input type="hidden" name="kids" value=<?php echo $_POST["kids"] ? $_POST["kids"] : ""; ?>>
-            <input type="hidden" name="request" value=<?php echo $_POST["request"] ? $_POST["request"] : ""; ?>>
+            <input type="hidden" name="request" value="<?php echo $_POST["request"] ? $_POST["request"] : ""; ?>">
             <input formaction="./#form" class="back_submit" type="submit" value="戻る">
             <input formaction="./send.php" type="submit" value="送信">
         </form>
