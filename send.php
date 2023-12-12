@@ -11,8 +11,7 @@ use League\OAuth2\Client\Provider\Google;
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 require './PHPMailer/src/Exception.php';
-
-$USER_NAME = 'marunao33318@gmail.com';
+require './env.php';
 
 $mail = new PHPMailer(true);
 
@@ -31,16 +30,16 @@ if(empty($_POST["request"])) {
 try {
     //Gmail 認証情報
     $host = 'smtp.gmail.com';
-    $username = $USER_NAME; // example@gmail.com
-    $password = 'olah hbyc qfiu hagz';
+    $username = MAIL; // example@gmail.com
+    $password = PASSWORD;
 
     //差出人
-    $from = $USER_NAME;
+    $from = MAIL;
     $fromname = 'TechElite';
 
     //宛先
-    $to = 'marunao33318@gmail.com';
-    $toname = 'テスト送信';
+    $to = MAIL;
+    $toname = 'TechElite LP';
 
     //件名・本文
     $subject = "{$_POST["name"]}様からご予約を承りました";
