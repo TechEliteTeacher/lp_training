@@ -21,12 +21,16 @@
                     <img class="header_logo" src="./img/logo_white.png" alt="楽園雅苑">
                     <div class="nav flex_center">
                         <ul class="flex_center">
-                            <li><a href="">お部屋</a></li>
-                            <li><a href="">プラン</a></li>
-                            <li><a href="">四季</a></li>
-                            <li><a href="">アクセス</a></li>
+                            <li><a href="#room">お部屋</a></li>
+                            <li><a href="#plan">プラン</a></li>
+                            <li><a href="#seasons">四季</a></li>
+                            <li><a href="#access">アクセス</a></li>
                         </ul>
-                        <a class="reservation_link" href="">予約</a>
+                        <a class="reservation_link" href="#form">予約</a>
+                        <button class="hamburger_btn" id="js-hamburger">
+                          <span class="bar"></span>
+                          <span class="txt">menu</span>
+                        </button>
                     </div>
                 </div>
                 <div class="kv_text">
@@ -38,6 +42,7 @@
                 </div>
             </div>
         </div>
+        <div class="hamburger__bg" id="js-bg"></div>
     <?php } else { ?>
         <!-- 下層ページ メニュー -->
         <div class="under_page_header">
@@ -45,13 +50,18 @@
                 <a href="./"><img class="header_logo" src="./img/logo_white.png" alt="楽園雅苑"></a>
                 <div class="nav flex_center">
                     <ul class="flex_center">
-                        <li><a href="">お部屋</a></li>
-                        <li><a href="">プラン</a></li>
-                        <li><a href="">四季</a></li>
-                        <li><a href="">アクセス</a></li>
+                        <li><a href="./#room">お部屋</a></li>
+                        <li><a href="./#plan">プラン</a></li>
+                        <li><a href="./#seasons">四季</a></li>
+                        <li><a href="./#access">アクセス</a></li>
                     </ul>
-                    <a class="reservation_link" href="">予約</a>
+                    <a class="reservation_link" href="./#form">予約</a>
+                    <button class="hamburger_btn" id="js-hamburger">
+                      <span class="bar"></span>
+                      <span class="txt">menu</span>
+                    </button>
                 </div>
             </div>
         </div>
+        <div class="hamburger__bg" id="js-bg"></div>
     <?php } ?>

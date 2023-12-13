@@ -68,6 +68,21 @@ $(function(){
             validation_flg = true;
         }
 
+        // チェックイン
+        var checkin = $('input[name="checkin"]').val();
+        if(checkin == "") {
+            $('input[name="checkin"]').next('.validation').text("＊入力必須です");
+            validation_flg = true;
+        }
+
+        // チェックアウト
+        var checkout = $('input[name="checkout"]').val();
+        if(checkout == "") {
+            $('input[name="checkout"]').next('.validation').text("＊入力必須です");
+            validation_flg = true;
+        }
+
+
         // ご希望の宿泊プラン
         var plan = $('select[name="plan"]').val();
         if(plan == "placeholder") {
@@ -93,4 +108,58 @@ $(function(){
             return false;
         }
     });
+
+    //20231207追加
+    const reservationButtons = document.querySelectorAll('.reservation_button');
+    if(reservationButtons.length) {
+      reservationButtons.forEach(function(button) {
+          button.addEventListener('click', function () {
+              // reservation_plan属性の値を取得
+              const reservationPlan = this.getAttribute('reservation_plan');
+      
+              // 選択肢を変更する
+              const selectElement = document.querySelector('[name=plan]');
+              const options = selectElement.options;
+                for (var i = 0; i < options.length; i++) {
+                  if (options[i].value === reservationPlan) {
+                      options[i].selected = true;
+                  } else {
+                      options[i].selected = false;
+                  }
+                }
+              // フォームまでスクロール
+              const formElement = document.getElementById('form');
+              if (formElement) {
+                  formElement.scrollIntoView({ behavior: 'smooth' });
+              }
+          });
+      });
+    }
+    $(function () {
+        $("#datepicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            dayNamesMin: ["日", "月", "火", "水", "木", "金", "土"],
+            monthNamesShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+        });
+        $("#datepicker2").datepicker({
+            dateFormat: "yy-mm-dd",
+            dayNamesMin: ["日", "月", "火", "水", "木", "金", "土"],
+            monthNamesShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+        });
+    });
+    const hamburgerBtn = document.getElementById("js-hamburger");
+    const hamburgerBg = document.getElementById("js-bg");
+    const navMenu = document.querySelector(".nav");
+    if(hamburgerBtn) {
+      hamburgerBtn.addEventListener('click',() => {
+        hamburgerBtn.classList.toggle('is-active');
+        hamburgerBg.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+      });
+      hamburgerBg.addEventListener('click',() => {
+        hamburgerBtn.classList.toggle('is-active');
+        hamburgerBg.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+      });
+    }
 });

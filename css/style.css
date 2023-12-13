@@ -560,6 +560,72 @@ input[type="submit"] {
 select {
     background-color: white;
 }
+
+.plan {
+    padding: 270px 20px 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.plan_contents {
+    margin-top: 80px;
+    gap: 30px;
+}
+
+.plan_content {
+    padding: 40px;
+    background-color: #F9F4E2;
+}
+
+.plan .title {
+    color:  #383838;
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 6.6px;
+}
+
+.plan hr {
+    margin: 32px 0px;
+}
+
+.plan li {
+    color: #383838;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 4.5px;
+}
+
+.plan .reservation_button {
+    border-radius: 20px;
+    background:  #B8A973;
+    max-width: 300px;
+    text-align: center;
+    color: #FFF;
+    font-family:'Noto Serif JP', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 4.8px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.plan_cloud {
+    position: absolute;
+    width: 235px;
+    top: 100px;
+    right: 0px;
+}
+
 @keyframes anim_room_cloud {
     0% {
         transform: translate(0, 0px);
@@ -567,6 +633,15 @@ select {
 
     100% {
         transform: translate(0px, 20px);
+    }
+}
+
+@media screen and (max-width: 1175px) {
+    .plan .title {
+        font-size: 18px;
+    }
+    .plan li {
+        font-size: 11px;
     }
 }
 
@@ -613,6 +688,18 @@ select {
     .short_input_content {
         max-width: 100%;
     }
+
+    .plan_contents {
+        flex-direction: column;
+    }
+
+    .plan li {
+        font-size: 14px;
+    }
+
+    .plan_cloud {
+        right: 12px;
+    }
 }
 
 @media screen and (max-width: 844px) {
@@ -629,9 +716,9 @@ select {
     .header_logo {
         width: 102px;
     }
-    .nav {
+    /* .nav {
         display: none;
-    }
+    } */
 
     .br_sp {
         display: block;
@@ -683,7 +770,7 @@ select {
         width: 40%;
     }
 
-    .room {
+    .room,.plan {
         padding: 50px 20px;
     }
 
@@ -766,6 +853,723 @@ select {
     .confirm_text {
         padding-top: 52px;
     }
+
+    .plan_cloud {
+        width: 112px;
+        top: 30px;
+    }
 }
 
+@media screen and (max-width: 400px) {
+    .plan_content {
+        padding: 32px;
+    }
+}
 /*  */
+
+
+.ui-datepicker {
+  background: #fff;
+  padding-top: 31px;
+  padding-bottom: 21px;
+  border: 1px solid #B8A973;
+  border-radius: 4px;
+  margin-top: -5px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  top: -9999px;
+}
+
+.ui-datepicker-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto 24px;
+}
+
+.ui-datepicker-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.3em;
+  padding-left: 0.3em;
+}
+
+.ui-datepicker-month {
+  margin-left: -0.4em;
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 14px;
+  background: url(../img/next.png) no-repeat center / 12px auto;
+  font: 0 / 0 serif;
+  cursor: pointer;
+}
+
+.ui-datepicker-next {
+  right: 25px;
+  transform: translateY(-50%);
+}
+
+.ui-datepicker-prev {
+  left: 25px;
+  transform: translateY(-50%) scale(-1, -1);
+}
+
+.ui-datepicker-calendar{
+  border-spacing: 0;
+  color: #383838;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.ui-datepicker-calendar thead th{
+  vertical-align: middle;
+  text-align: center;
+  width: 80px;
+  height: 44px;
+  font-weight: 400;
+}
+
+.ui-datepicker-calendar thead th:first-child {
+  color: #CC0000;
+}
+
+.ui-datepicker-calendar thead th:last-child {
+  color: #1F6FE8;
+}
+
+.ui-datepicker-calendar thead th span {
+  position: relative;
+  left: 0.15em;
+}
+
+.ui-datepicker-calendar tbody td{
+  vertical-align: middle;
+  text-align: center;
+  width: 80px;
+  height: 44px;
+}
+
+.ui-datepicker-calendar tbody td:hover {
+  background: #B8A973;
+}
+
+.ui-datepicker-calendar tbody td:hover a {
+  color: #fff;
+}
+
+.ui-datepicker-calendar tbody td a {
+  color: #383838;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  font-family: 'Noto Serif JP', serif;
+  position:relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.15em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day{
+  background: #B8A973;
+}
+
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day a{
+  color: #fff;
+}
+
+.hamburger_btn {
+  display: none;
+}
+
+.seasons {
+  background: #F9F4E2;
+  padding: 200px 0;
+}
+.seasons .content_title {
+  margin-bottom: 80px;
+}
+
+.seasons .ja_title {
+  margin-right: -0.3em;
+}
+
+.seasons_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.seasons_txt {
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  line-height: calc(34 / 18);
+  font-weight: 400;
+  font-family: 'Noto Serif JP',serif;
+  margin-bottom: 80px;
+}
+
+.seasons_pics {
+  margin: 0 auto 64px;
+  position: relative;
+  aspect-ratio: 1440 / 954;
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+}
+
+.seasons_pics .img1 {
+  font-size: 0;
+  aspect-ratio: 1020 / 536;
+  width: calc(1020% / 14.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.seasons_pics .img1::before {
+  content: '';
+  z-index: 1;
+  width: calc(211% / 10.2);
+  aspect-ratio: 211 / 93;
+  position: absolute;
+  top: calc(110% / 5.36);
+  right: calc(-156% / 10.2);
+  background: url(../img/seasons-deco1.png) no-repeat center / 100%  100%;
+}
+
+.seasons_pics .img2 {
+  font-size: 0;
+  aspect-ratio: 230 / 300;
+  width: calc(230% / 14.4);
+  position: absolute;
+  right: calc(120% / 14.4);
+  top: calc(346% / 9.54);
+}
+
+.seasons_pics .img3 {
+  font-size: 0;
+  aspect-ratio: 586 / 338;
+  width: calc(586% / 14.4);
+  position: absolute;
+  left: calc(262% / 14.4);
+  bottom: 0;
+}
+
+.seasons_pics .img3::before {
+  content: '';
+  z-index: 1;
+  width: calc(155% / 5.86);
+  aspect-ratio: 155 / 55;
+  position: absolute;
+  top: calc(184% / 3.38);
+  left: calc(-126% / 5.86);
+  background: url(../img/seasons-deco1.png) no-repeat center / 100%  100%;
+}
+
+.seasons_slider {
+  display: flex;
+  gap: 28px;
+  overflow: hidden;
+}
+
+.seasons_slider ul {
+  flex: 0 0 auto;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+
+.seasons_slider ul li {
+  flex: 0 0 auto;
+  width: 340px;
+}
+
+.seasons_slider ul li img {
+  aspect-ratio: 340 / 244;
+}
+
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+    to {
+    transform: translateX(-100%);
+  }
+}
+
+.access {
+  padding: 200px 0;
+}
+
+.access .content_title {
+  max-width: 100%;
+  gap: 2rem;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.access .ja_title {
+  margin-right: -0.3em;
+}
+
+.access_top,
+.access_bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.access_top {
+  padding-bottom: 80px;
+}
+
+.access_bottom {
+  padding-top: 80px;
+}
+
+.access_map {
+  width: 100%;
+  height: 600px;
+}
+
+.access_map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.access_head {
+  display: flex;
+  align-items: center;
+  gap: 24px 120px;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+.access_head .txt {
+  font-family: 'Noto Serif JP',serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+}
+
+.access_head .txt .only-sp {
+  display: none;
+}
+
+.access_head .logo {
+  aspect-ratio: 169 / 66;
+  max-height: 66px;
+}
+
+.access_txt {
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  line-height: 2;
+  font-weight: 400;
+  font-family: 'Noto Serif JP',serif;
+  text-align: center;
+}
+
+.company {
+  background: url(../img/company_bg-pc.jpg) no-repeat center / cover;
+  padding: 200px 20px;
+}
+
+.company_inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.company .content_title {
+  margin-bottom: 80px;
+  max-width: 100%;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.company .ja_title {
+  color: #fff;
+  white-space: nowrap;
+  margin-right: -0.3em;
+}
+
+.company .en_title {
+  color: #fff;
+  white-space: nowrap;
+}
+
+.company .line {
+  background-color: #fff;
+  flex: 0 0 auto;
+}
+
+.company_list {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.company_item  {
+  border-bottom: 1px solid #fff;
+  display: flex;
+}
+
+.company_item dt,
+.company_item dd {
+  color: #fff;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: 'Noto Serif JP',serif;
+}
+.company_item dt {
+  flex: 0 0 auto;
+  width: 230px;
+  border-right: 1px solid #fff;
+}
+
+.company_item dd a {
+  color: #00C2FF;
+  text-decoration: underline;
+  transition: .3s ease opacity;
+}
+
+.company_item dd a:hover {
+  opacity: 0.7;
+}
+
+.reservation_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 844px) {
+  .ui-datepicker {
+    padding-top: 31px;
+    padding-bottom: 21px;
+    border-radius: 4px;
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+  .ui-datepicker-header {
+    margin-bottom: 22px;
+  }
+  .ui-datepicker-calendar thead th{
+    width: 40px;
+    height: 32px;
+  }
+  .ui-datepicker-calendar tbody td{
+    width: 40px;
+    height: 32px;
+  }
+  .hamburger_btn {
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    display: block;
+    margin-left: 28px;
+    position: relative;
+    outline: none;
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+  }
+  .hamburger_btn .bar {
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hamburger_btn .txt {
+    display: inline-block;
+    padding-left: 0.3em;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    font-family: EB Garamond;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 8px;
+  }
+  .hamburger_btn .bar::before,
+  .hamburger_btn .bar::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    transition-property: transform, top;
+  }
+  .hamburger_btn .bar::before {
+    top: -7px;
+  }
+  .hamburger_btn .bar::after {
+    top: 7px;
+  }
+  .hamburger_btn:hover {
+    opacity: 0.7;
+  }
+  .hamburger_btn.is-active .bar{
+    background-color: transparent;
+  }
+  .hamburger_btn.is-active .bar::before {
+    top: 0;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  .hamburger_btn.is-active .bar::after {
+    top: 0;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .header {
+    position: relative;
+    z-index: 10;
+  }
+  .header > a,
+  .header_logo {
+    position: relative;
+    z-index: 11;
+  }
+  .nav .flex_center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #B8A973;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 106px;
+    padding-bottom: 50px;
+    transition: .3s ease opacity;
+    transition-property: opacity, transform;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%);
+  }
+  .kv .nav .flex_center {
+    top: -16px;
+    left: -20px;
+    right: -20px;
+    position: absolute;
+  }
+  .nav.is-active .flex_center {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav.is-active .reservation_link{
+    visibility: hidden;
+  }
+  .nav a {
+    line-height: 26px;
+    letter-spacing: 0.3em;
+    padding-left: 0.3em;
+  }
+  .nav .flex_center li a {
+    line-height: 2;
+    position: relative;
+  }
+  .nav .flex_center li a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .reservation_link {
+    text-decoration: none;
+    width: 80px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: none;
+  }
+  .hamburger__bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .hamburger__bg.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .seasons {
+    padding: 52px 0;
+  }
+  .seasons .content_title {
+    margin-bottom: 40px;
+  }
+
+  .seasons_txt {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 40px;
+  }
+  
+  .seasons_pics {
+    margin-bottom: 20px;
+    aspect-ratio: 375 / 266;
+  }
+  
+  .seasons_pics .img1 {
+    width: calc(276% / 3.75);
+  }
+  
+  .seasons_pics .img1::before {
+    width: calc(68% / 2.76);
+    top: calc(30% / 1.44);
+    right: calc(-51% / 2.76);
+    background: url(../img/seasons-deco1.png) no-repeat center / 100%  100%;
+  }
+  
+  .seasons_pics .img2 {
+    width: calc(62% / 3.75);
+    right: calc(20% / 3.75);
+    top: calc(92% / 2.66);
+  }
+  
+  .seasons_pics .img3 {
+    width: calc(176% / 3.75);
+    left: calc(58% / 3.75);
+  }
+  
+  .seasons_pics .img3::before {
+    width: calc(47% / 1.76);
+    top: calc(55% / 1.02);
+    left: calc(-38% / 1.76);
+  }
+  
+  .seasons_slider {
+    gap: 12px;
+  }
+  
+  .seasons_slider ul {
+    gap: 12px;
+  }
+  
+  .seasons_slider ul li {
+    flex: 0 0 auto;
+    width: 125px;
+  }
+  
+  @keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .access {
+    padding: 52px 0;
+  }
+
+  .access_top {
+    padding-bottom: 40px;
+  }
+  
+  .access_bottom {
+    padding-top: 40px;
+  }
+  
+  .access_map {
+    height: 310px;
+  }
+  .access_head {
+    flex-wrap: wrap;
+    gap: 32px 120px;
+    margin-bottom: 32px;
+  }
+  
+  .access_head .txt {
+    font-size: 14px;
+    line-height: calc(30 / 14);
+    text-align: center;
+  }
+  .access_head .txt .only-pc {
+    display: none;
+  }
+
+  .access_head .txt .only-sp {
+    display: inline;
+  }
+  
+  .access_txt {
+    font-size: 14px;
+    line-height: calc(30 / 14);
+    text-align: left;
+  }
+  
+  .company {
+    background: url(../img/company_bg-sp.jpg) no-repeat center / cover;
+    padding-top: 70px;
+    padding-bottom: 52px;
+  }
+  
+  .company .content_title {
+    gap: 1rem 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .company_item {
+    flex-wrap: wrap;
+  }
+  
+  .company_item dt,
+  .company_item dd {
+    font-size: 14px;
+    line-height: calc(30 / 14);
+  }
+  .company_item dt {
+    flex: 0 0 auto;
+    width: 100%;
+    border-right: none;
+  }
+
+}
