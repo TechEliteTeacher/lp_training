@@ -4,9 +4,7 @@ ini_set("error_log", "");
 // require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\OAuth;
 use PHPMailer\PHPMailer\Exception;
-use League\OAuth2\Client\Provider\Google;
 
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
