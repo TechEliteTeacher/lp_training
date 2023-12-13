@@ -1,8 +1,4 @@
-送信
 <?php
-ini_set("error_log", "");
-// require 'vendor/autoload.php';
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
