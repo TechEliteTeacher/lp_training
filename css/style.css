@@ -55,7 +55,6 @@ a {
     position: relative;
 }
 
-/* 第２回追加コード */
 .nav .flex_center a::after {
     position: absolute;
     left: 0;
@@ -71,7 +70,6 @@ a {
     opacity: 1;
     transition: 0.3s;
 }
-/*  */
 
 .reservation_link {
     width: 140px;
@@ -83,12 +81,10 @@ a {
     margin-left: 20px;
 }
 
-/* 第２回追加コード */
 .reservation_link:hover {
     opacity: 0.8;
     transition: 0.3s;
 }
-/*  */
 
 .kv_text {
     position: absolute;
@@ -112,8 +108,6 @@ a {
     letter-spacing: 7.2px;
     line-height: 40px;
 }
-
-/* 第２回追加コード */
 
 .about {
     padding: 270px 20px 300px;
@@ -373,5 +367,3 @@ a {
         height: 30px;
     }
 }
-
-/*  */
